@@ -1,0 +1,280 @@
+/* Colorful Login Form */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 83vh;
+  background: #eaf1f3;
+  height: max-content;
+}
+
+.form {
+  --input-focus: #5c646b;
+  --font-color: #1f1f1f;
+  --font-color-sub: #555;
+  --bg-color: #ffffff;
+  --main-color: rgb(65, 67, 68);
+  padding: 25px;
+  background: #ffffffb2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--main-color);
+  box-shadow: 5px 5px 0px var(--main-color);
+  transition: 0.3s ease;
+}
+
+.form:hover {
+  box-shadow: 6px 6px 15px rgba(59, 130, 246, 0.4);
+}
+
+.form > p {
+  font-family: 'Poppins', sans-serif;
+  color: var(--font-color);
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form > p > span {
+  font-family: 'Roboto', sans-serif;
+  color: var(--font-color-sub);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.separator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.separator > div {
+  width: 100px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+}
+
+.separator > span {
+  color: var(--font-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.oauthButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 45px;
+  border-radius: 8px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px 0px var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.oauthButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background:#8DBCC7;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.oauthButton:hover {
+  color: #19191a;
+  box-shadow: 6px 6px 12px rgba(59, 130, 246, 0.5);
+}
+
+.oauthButton:hover::before {
+  width: 100%;
+}
+
+.form > input {
+  width: 260px;
+  height: 40px;
+  border-radius: 6px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px 0px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form > input:focus {
+  border-color: var(--input-focus);
+}
+*/
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #e6e0e0
+}
+
+.price {
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff
+}
+
+.desc {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.625;
+  color: rgba(156, 163, 175, 1);
+}
+
+.lists {
+  margin-bottom: 1.5rem;
+  flex: 1 1 0%;
+  color: rgba(156, 163, 175, 1);
+}
+
+.lists .list {
+  margin-bottom: 0.5rem;
+  display: flex;
+  margin-left: 0.5rem
+}
+
+.lists .list svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  color: rgba(167, 139, 250, 1);
+}
+
+.action {
+  border: none;
+  outline: none;
+  display: inline-block;
+  border-radius: 0.25rem;
+  background-color: rgba(167, 139, 250, 1);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(17, 24, 39, 1);
+}
+
+/* From Uiverse.io by alexruix */ 
+.card {
+ height: 254px;
+ width: 280px;
+ border-radius: 20px;
+ background: #f5f5f5;
+ position: relative;
+ padding: 1.8rem;
+ border: 2px solid #292a2c;
+ transition: 0.5s ease-out;
+ overflow: visible;
+}
+
+.card-details {
+ color: black;
+ height: 100%;
+ gap: .5em;
+ display: grid;
+ place-content: center;
+}
+
+
+
+.text-body {
+ color: rgb(134, 134, 134);
+}
+
+/*Text*/
+.text-title {
+ font-size: 1.5em;
+ font-weight: bold;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.review-box {
+  width: 330px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.review-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.review-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.review-name {
+  font-size: 20px;
+  margin: 0;
+}
+
+.review-position {
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.review-text {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}

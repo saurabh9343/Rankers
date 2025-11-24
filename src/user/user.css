@@ -1,0 +1,127 @@
+/* ============================
+   ADMIN SIDEBAR MAIN STYLES
+   ============================ */
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* Hidden by default */
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(180deg, #245a8f, #287bce);
+  color: white;
+  padding: 20px;
+  z-index: 2000;
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+/* OPEN SIDEBAR */
+.admin-sidebar.active {
+  left: 0;
+}
+
+/* ============================
+   BACKDROP
+   ============================ */
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1999;
+}
+
+/* ============================
+   CLOSE BUTTON (Mobile Only)
+   ============================ */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: white;
+  border: none;
+  font-size: 20px;
+  padding: 2px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+/* ============================
+   PROFILE IMAGE & INFO
+   ============================ */
+.profile-box {
+  margin-top: 40px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40%;
+  border: 3px solid white;
+  margin-bottom: 10px;
+}
+
+/* ============================
+   MENU LIST STYLE
+   ============================ */
+.menu-list .menu-item .btn {
+  background: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 14px;
+  transition: 0.2s;
+  margin: 5px;
+}
+
+.menu-list .menu-item .btn:hover {
+  background: white;
+  transform: translateX(5px);
+}
+
+/* ============================
+   ANIMATIONS
+   ============================ */
+.slide-right {
+  animation: slideRight 0.4s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================
+   DESKTOP STYLES
+   ============================ */
+@media (min-width: 992px) {
+  .admin-sidebar {
+    left: 0 !important; /* Always visible on desktop */
+  }
+
+  .close-btn {
+    display: none !important;
+  }
+}
