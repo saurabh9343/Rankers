@@ -1,15 +1,10 @@
-import React from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
-import { auth } from '../Firebase';
+import React from "react";
+import { Navigate, Outlet } from "react-router-dom";
 
-function ProtectedRoute() {
-  const user = auth.currentUser;
+const ProtectedRoute = () => {
+  const token = localStorage.getItem("token"); // yaha se login check
 
-  if (!user) {
-    return <Navigate to="/login" replace />;
-  }
-
-  return <Outlet />;
-}
+  return token ? <Outlet /> : <Navigate to="/login" replace />;
+};
 
 export default ProtectedRoute;

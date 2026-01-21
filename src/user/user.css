@@ -7,7 +7,8 @@
   left: -260px; /* Hidden by default */
   width: 260px;
   height: 100vh;
-  background: linear-gradient(180deg, #245a8f, #287bce);
+  background: linear-gradient(#070211, #01050ccc, #1e419b);
+  
   color: white;
   padding: 20px;
   z-index: 2000;
@@ -20,9 +21,6 @@
   left: 0;
 }
 
-/* ============================
-   BACKDROP
-   ============================ */
 .sidebar-backdrop {
   position: fixed;
   top: 0;
@@ -78,6 +76,7 @@
 
 .menu-list .menu-item .btn:hover {
   background: white;
+  color: #151516;
   transform: translateX(5px);
 }
 
@@ -123,5 +122,427 @@
 
   .close-btn {
     display: none !important;
+  }
+}
+
+
+.info-custom {
+  border-left: 6px solid #0d6efd;
+  border-right: 6px solid #0d6efd;
+  border-radius: 0px 30px 0px 30px;
+  box-shadow: 0 4px 12px rgba(12, 12, 12, 0.15);
+  transition: all 0.45s ease;
+}
+
+/* Hover Effect */
+.info-custom:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 10px 25px rgba(22, 23, 24, 0.35); /* blue glow shadow */
+}
+
+.custom-card {
+  background: white;
+  border-left: 6px solid #0d6efd; /* blue border */
+  border-radius: 0px 30px 0px 30px;
+  padding: 10px;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  color: #161616;
+}
+
+/* Hover Effect */
+.custom-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0px 12px 26px rgba(10, 10, 10, 0.35); /* blue glow */
+  border-left-color: #003c90; /* darker blue on hover */  
+}
+
+/* content box */
+
+/* From Uiverse.io by alexruix */ 
+.card {
+ width: 350px;
+ height: 254px;
+ border-radius: 20px;
+ background: #f5f5f5;
+ position: relative;
+ padding: 1.8rem;
+ border: 2px solid #c3c6ce;
+ transition: 0.5s ease-out;
+ overflow: visible;
+}
+
+.card-details {
+ color: black;
+ height: 100%;
+ place-content: center;
+}
+
+.card-button {
+ transform: translate(-50%, 100%);
+ width: 60%;
+ border-radius: 1rem;
+ border: none;
+ background: linear-gradient(#8d5df6, #034fe6cc, #011d62);
+ color: #fff;
+ font-size: 1rem;
+ padding: .5rem 1rem;
+ position: absolute;
+ left: 50%;
+ bottom: 0;
+ opacity: 0;
+ transition: 0.3s ease-out; 
+ cursor:pointer;
+}
+
+.text-body {
+ color: rgb(134, 134, 134);
+}
+
+/*Text*/
+.text-title {
+ font-size: 1.5em;
+ font-weight: bold;
+}
+
+/*Hover*/
+.card:hover {
+ border-color: #008bf8;
+ box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+ transform: translate(-50%, 50%);
+ opacity: 1;
+}
+
+/* From Uiverse.io by Na3ar-17 */ 
+.radio-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-input * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+.radio-input label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0px 20px;
+  border-radius: 10px;
+  width: 220px;
+  cursor: pointer;
+  height: 50px;
+  position: relative;
+ box-shadow: 0 4px 10px 0 rgba(44, 44, 44, 0.25);
+}
+
+.radio-input label::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 45px;
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+.radio-input label:hover::before {
+  transition: all 0.2s ease;
+  background-color: #5d7ae2;
+}
+
+.radio-input .label:has(input:checked)::before {
+  background-color: #345bbd;
+  border-color: #18191a;
+  height: 50px;
+}
+.radio-input .label .text {
+  font-style:inherit;
+  color: #151516;
+}
+
+.radio-input .label input[type="radio"] {
+  background-color: #313135;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio-input .label input[type="radio"]:checked {
+  background-color: #435dd8;
+  -webkit-animation: puls 0.7s forwards;
+  animation: pulse 0.7s forwards; 
+}
+
+.radio-input .label input[type="radio"]:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: #fff;
+  transform: scale(0);
+}
+
+.radio-input .label input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.backbtn{
+  background: linear-gradient(#8d5df6, #034fe6cc, #011d62);
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  text-align: center;
+  text-shadow: #161616;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+}
+
+/* .backbtn:hover {
+  background: linear-gradient(#321c61, #265cc8cc, #d9dce4);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(48, 47, 47, 0.25);
+} */
+
+.Ana-custom {
+  border-left: 6px solid #0d6efd;
+  border-right: 6px solid #0d6efd;
+  border-radius: 0px 30px 0px 30px;
+  box-shadow: 0 4px 12px rgba(12, 12, 12, 0.15);
+  transition: all 0.45s ease;
+}
+
+/* Hover Effect */
+.Ana-custom:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 10px 25px rgba(22, 23, 24, 0.35); /* blue glow shadow */
+}
+
+.Ana-card {
+  background: white;
+  border-left: 6px solid #0d6efd; /* blue border */
+  padding: 10px;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  color: #161616;
+}
+
+/* Hover Effect */
+.Ana-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0px 12px 26px rgba(10, 10, 10, 0.35); /* blue glow */
+  border-left-color: #003c90; /* darker blue on hover */
+  
+}
+
+.settings-container {
+  max-width: 900px; 
+}
+
+.text-set{
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #1e293b, #4937ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.setting-card {
+  border: 1px solid rgba(0,0,0,0.05) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: #ffffff !important;
+  margin-bottom: 15px;
+}
+
+.setting-card:hover {
+  transform: scale(1.02);
+  background: #fdfdfd !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+  border-color: #018790 !important;
+}
+
+.icon-box1 {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.setting-card:hover .icon-box {
+  transform: rotate(-10deg);
+}
+
+.arrow-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  border-radius: 50%;
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+.security-page-bg .card {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.setting-card:hover .arrow-icon {
+  background: #018790;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .sett-title { font-size: 1.8rem; }
+  .setting-card { padding: 15px !important; }
+}
+
+/* setting  security */
+.security-page-bg {
+  background-color: #f8fafc;
+  font-family: "Inter", sans-serif;
+}
+
+.security-title {
+  background: linear-gradient(90deg, #0f172a, #334155);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-divider {
+  width: 80px;
+  height: 4px;
+  background: #4937ec;
+  border-radius: 10px;
+}
+
+.policy-item {
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.policy-item:hover {
+  background: #f1f5f9;
+}
+
+.policy-icon {
+  font-size: 1.5rem;
+  background: #f1f5f9;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.border-bottom-light {
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+  width: 100% !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .display-6 {
+    font-size: 1.8rem;
+  }
+  .policy-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
   }
 }
